@@ -2,7 +2,7 @@
     import type { PageData } from './$types';
     let { data }: { data: PageData } = $props();
     import Header from '../Header.svelte';
-    import { voltage } from '../Ohm.svelte';
+    import { section } from '../Ohm.svelte';
 </script>
 
-<Header title="Voltage"/>
+<Header title="Section" />
