@@ -35,12 +35,16 @@ export function voltage(raw_r:string, raw_i:string): number {
     return v;
 };
 
-export function amperage(v:number, r:number): number {
+export function amperage(raw_v:string, raw_r:string): number {
+    v = treat_exp(raw_v);
+    r = treat_exp(raw_r);
     let a = v / r;
     return a;
 };
 
-export function resistance(v:number, i:number): number {
+export function resistance(raw_v:string, raw_i:string): number {
+    v = treat_exp(raw_v);
+    i = treat_exp(raw_i);
     let r = v / i;
     return r;
 };
