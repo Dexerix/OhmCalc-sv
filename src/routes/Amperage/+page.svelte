@@ -14,4 +14,4 @@
 <input bind:value={voltage} type="text" name="voltage" id="voltage"> Voltage (V)<br>
 <input bind:value={resistance} type="text" name="resistance" id="resistance"> Resistance (Ω)<br>
 <button onclick={() => { amperageValue = amperage(voltage, resistance); }}>Calculate</button>
-<p>Amperage: {amperageValue}</p>
+<p>Amperage: {amperageValue} A</p>

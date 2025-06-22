@@ -1,12 +1,17 @@
 let raw_r: string;
 let raw_v: string;
 let raw_i: string;
+let raw_diameter: string;
+let raw_gauge: string;
+let raw_l: string;
+let raw_rho: string;
 let r: number;
 let v: number;
 let i: number;
 let diameter: number;
-let a: number;
+let gauge: number;
 let l: number;
+let rho: number;
 let r_list: number[];
 let r_total: number;
 
@@ -49,19 +54,25 @@ export function resistance(raw_v:string, raw_i:string): number {
     return r;
 };
 
-export function section(diameter: number): number {
-    a = Math.round((Math.PI * Math.pow(diameter, 2) / 4) * 100) / 100;
-    return a;
+export function section(raw_diameter: string): number {
+    diameter = treat_exp(raw_diameter);
+    gauge = Math.round((Math.PI * Math.pow(diameter, 2) / 4) * 100) / 100;
+    return gauge;
 };
 
-export function resistivity(raw_r:string, a:number, l:number): number {
+export function resistivity(raw_r:string, raw_gauge:string, raw_l:string): number {
     r = treat_exp(raw_r);
-    let rho = (r * a) / l;
+    gauge = treat_exp(raw_gauge);
+    l = treat_exp(raw_l);
+    let rho = (r * gauge) / l;
     return rho;
 };
 
-export function rhosistence(rho:number, a:number, l:number): number {
-    r = (rho * l) / a;
+export function rhosistence(raw_rho:string, raw_gauge:string, raw_l:string): number {
+    gauge = treat_exp(raw_gauge);
+    l = treat_exp(raw_l);
+    rho = treat_exp(raw_rho);
+    r = (rho * l) / gauge;
     return r;
 };
 
