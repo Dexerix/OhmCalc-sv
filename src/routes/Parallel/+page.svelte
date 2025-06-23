@@ -9,6 +9,6 @@
 
 <Header title="Parallel Resistor" />
 
-<input bind:value={resistor_list} type="text" name="resistor_list" id="resistor_list"> Resistor List (Ω, separated by commas)<br>
+<input bind:value={resistor_list} type="text" name="resistor_list" id="resistor_list" class="input"> Resistor List (Ω, separated by commas)<br>
 <button onclick={() => { totalValue = parallel_resistor(resistor_list.split(',')); }}>Calculate</button>
 <p>Total Resistance: {totalValue} Ω</p>

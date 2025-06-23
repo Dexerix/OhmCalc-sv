@@ -9,9 +9,13 @@
     let voltageValue: number = $state(0)
 </script>
 
+<style>
+    
+</style>
+
 <Header title="Voltage"/>
 
-<input bind:value={resistance} type="text" name="resistance" id="resistance"> Resistance (Ω)<br>
-<input bind:value={intensity} type="text" name="intensity" id="intensity"> Intensity (A)<br>
+<input bind:value={resistance} type="text" name="resistance" id="resistance" class="input"> Resistance (Ω)<br>
+<input bind:value={intensity} type="text" name="intensity" id="intensity" class="input"> Intensity (A)<br>
 <button onclick={() => { voltageValue = voltage(resistance, intensity); }}>Calculate</button>
 <p>Voltage: {voltageValue} V</p>

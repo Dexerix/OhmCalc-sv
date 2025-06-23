@@ -11,8 +11,8 @@
 
 <Header title="Resistivity" />
 
-<input bind:value={resistance} type="text" name="resistance" id="resistance"> Resistance (Ω)<br>
-<input bind:value={gauge} type="text" name="gauge" id="gauge"> Gauge (mm²)<br>
-<input bind:value={length} type="text" name="length" id="length"> Length (m)<br>
+<input bind:value={resistance} type="text" name="resistance" id="resistance" class="input"> Resistance (Ω)<br>
+<input bind:value={gauge} type="text" name="gauge" id="gauge" class="input"> Gauge (mm²)<br>
+<input bind:value={length} type="text" name="length" id="length" class="input"> Length (m)<br>
 <button onclick={() => { rhoValue = resistivity(resistance, gauge, length); }}>Calculate</button>
 <p>Resistivity: {rhoValue} Ω mm2/m</p>

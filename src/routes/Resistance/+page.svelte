@@ -11,7 +11,7 @@
 
 <Header title="Resistance" />
 
-<input bind:value={voltage} type="text" name="voltage" id="voltage"> Voltage (V)<br>
-<input bind:value={intensity} type="text" name="intensity" id="intensity"> Intensity (A)<br>
+<input bind:value={voltage} type="text" name="voltage" id="voltage" class="input"> Voltage (V)<br>
+<input bind:value={intensity} type="text" name="intensity" id="intensity" class="input"> Intensity (A)<br>
 <button onclick={() => { resistanceValue = resistance(voltage, intensity); }}>Calculate</button>
 <p>Resistance: {resistanceValue} Ω</p>

@@ -5,6 +5,7 @@
     a {
         text-decoration: none;
         color: inherit;
+        text-align: center;
     }
 </style>
 
