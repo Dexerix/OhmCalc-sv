@@ -12,7 +12,7 @@ let diameter: number;
 let gauge: number;
 let l: number;
 let rho: number;
-let r_list: number[];
+let r_list: string[];
 let r_total: number;
 
 function treat_exp(raw_v: string): number {
@@ -76,28 +76,28 @@ export function rhosistence(raw_rho:string, raw_gauge:string, raw_l:string): num
     return r;
 };
 
-export function parallel_resistor(r_list: number[]): number {
+export function parallel_resistor(r_list: string[]): number {
     r_total = 0;
     if (r_list.length === 0) {
         return 0;
-    }else if (r_list.length === 1) {
-        return r_list[0];
+    } else if (r_list.length === 1) {
+        return treat_exp(r_list[0]);
     } else {
         for (let i = 0; i < r_list.length; i++) {
-        r_total += 1 / r_list[i];
-    }
-    return 1 / r_total;
+            r_total += 1 / treat_exp(r_list[i]);
+        }
+        return 1 / r_total;
     }
 };
 
-export function serial_resistor(r_list: number[]): number {
+export function serial_resistor(r_list: string[]): number {
     r_total = 0;
     if (r_list.length > 1) {
         for (let i = 0; i < r_list.length; i++) {
-            r_total += r_list[i];
+            r_total += treat_exp(r_list[i]);
         }
     } else {
-        r_total = r_list[0];
+        r_total = treat_exp(r_list[0]);
     }
     return r_total;
 };
