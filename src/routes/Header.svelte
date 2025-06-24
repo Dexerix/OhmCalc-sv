@@ -4,8 +4,10 @@
 <style>
     a {
         text-decoration: none;
-        color: inherit;
         text-align: center;
+        h1 {
+            color: var(--title-color);
+        }
     }
 </style>
 

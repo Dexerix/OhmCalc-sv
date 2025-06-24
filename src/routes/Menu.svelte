@@ -1,9 +1,12 @@
 <style>
     * {
         text-decoration: none;
+        text-align: center;
+        display: block;
+        color: var(--primary-color);
         :hover {
             text-decoration: none;
-            color: blue;
+            color: var(--secondary-color);
         }
     }
 </style>

@@ -9,6 +9,9 @@
 
 <Header title="Section" />
 
-<input bind:value={raw_diameter} type="text" name="diameter" id="diameter" class="input"> Diameter (mm)<br>
-<button onclick={() => { gaugeValue = section(raw_diameter); }}>Calculate</button>
-<p>Gauge: {gaugeValue} mm2</p>
+<div class="fields">
+    <label for="diameter">Diameter (mm):</label>
+    <input bind:value={raw_diameter} type="text" name="diameter" id="diameter" class="input"><br>
+    <button onclick={() => { gaugeValue = section(raw_diameter); }}>Calculate</button>
+    <p>Gauge: {gaugeValue} mm2</p>
+</div>
