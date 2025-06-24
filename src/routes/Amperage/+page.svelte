@@ -12,10 +12,18 @@
 <Header title="Amperage"/>
 
 <div class="fields">
-    <label for="voltage">Voltage (V):</label>
-    <input bind:value={voltage} type="text" name="voltage" id="voltage" class="input"><br>
-    <label for="resistance">Resistance (Ω):</label>
-    <input bind:value={resistance} type="text" name="resistance" id="resistance" class="input"><br>
+    <table>
+        <tbody>
+            <tr>
+                <td id="label"><label for="voltage">Voltage (V):</label></td>
+                <td><input bind:value={voltage} type="text" name="voltage" id="voltage" class="input"></td>
+            </tr>
+            <tr>
+                <td id="label"><label for="resistance">Resistance (Ω):</label></td>
+                <td><input bind:value={resistance} type="text" name="resistance" id="resistance" class="input"></td>
+            </tr>
+        </tbody>
+    </table>
     <button onclick={() => { amperageValue = amperage(voltage, resistance); }}>Calculate</button>
     <p>Amperage: {amperageValue} A</p>
 </div>

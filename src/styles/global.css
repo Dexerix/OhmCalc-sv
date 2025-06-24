@@ -2,7 +2,7 @@
     --primary-color: #0078ff;
     --secondary-color: #00e5ff;
     --text-color: #f8f8ff;
-    --background-color: #121212;
+    --background-color: #121212df;
     --title-color: #8a2be2;
 }
 
@@ -10,6 +10,7 @@
     background-color: var(--background-color);
     background-size: cover;
     background-repeat: repeat;
+    box-sizing: border-box;
 }
 
 html, body {
@@ -31,6 +32,9 @@ html, body {
         margin-bottom: 10px;
         color: var(--text-color);
         text-align: right;
+    }
+    #label {
+        text-align: left;
     }
     button {
         color: var(--text-color);

@@ -16,6 +16,7 @@ let r_list: string[];
 let r_total: number;
 
 function treat_exp(raw_v: string): number {
+    let calculated_value: number;
     if (raw_v.indexOf("*") !== -1) {
         let parts = raw_v.split("*");
         let base_value = parseFloat(parts[0]);
@@ -24,13 +25,11 @@ function treat_exp(raw_v: string): number {
         let power = parseInt(exp_parts[1])
         let exponent_value = 10**power;
 
-        let calculated_value = base_value * exponent_value;
-
-        return calculated_value;
+        calculated_value = base_value * exponent_value;
     } else {
-        let calculated_value = parseFloat(raw_v);
-        return calculated_value;
+        calculated_value = parseFloat(raw_v);
     }
+    return calculated_value;
 };
 
 export function voltage(raw_r:string, raw_i:string): number {

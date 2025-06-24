@@ -12,12 +12,22 @@
 <Header title="Resistivity" />
 
 <div class="fields">
-    <label for="resistance">Resistance (Ω):</label>
-    <input bind:value={resistance} type="text" name="resistance" id="resistance" class="input"><br>
-    <label for="gauge">Gauge (mm²):</label>
-    <input bind:value={gauge} type="text" name="gauge" id="gauge" class="input"><br>
-    <label for="length">Length (m):</label>
-    <input bind:value={length} type="text" name="length" id="length" class="input"><br>
+    <table>
+        <tbody>
+            <tr>
+                <td id="label"><label for="resistance">Resistance (Ω):</label></td>
+                <td><input bind:value={resistance} type="text" name="resistance" id="resistance" class="input"></td>
+            </tr>
+            <tr>
+                <td id="label"><label for="gauge">Gauge (mm²):</label></td>
+                <td><input bind:value={gauge} type="text" name="gauge" id="gauge" class="input"></td>
+            </tr>
+            <tr>
+                <td id="label"><label for="length">Length (m):</label></td>
+                <td><input bind:value={length} type="text" name="length" id="length" class="input"></td>
+            </tr>
+        </tbody>
+    </table>
     <button onclick={() => { rhoValue = resistivity(resistance, gauge, length); }}>Calculate</button>
     <p>Resistivity: {rhoValue} Ω mm2/m</p>
 </div>
