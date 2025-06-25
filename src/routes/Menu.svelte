@@ -4,6 +4,7 @@
         text-align: center;
         display: block;
         color: var(--primary-color);
+        padding: 0px;
         :hover {
             text-decoration: none;
             color: var(--secondary-color);

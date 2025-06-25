@@ -4,10 +4,10 @@
     --text-color: #f8f8ff;
     --background-color: #121212df;
     --title-color: #8a2be2;
+    --border : #898ea4;
 }
 
 * {
-    background-color: var(--background-color);
     background-size: cover;
     background-repeat: repeat;
     box-sizing: border-box;
@@ -22,22 +22,22 @@ html, body {
 }
 
 .fields {
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: grid;
+    place-items: center;
     color: var(--text-color);
     text-align: center;
+    margin-top: 20px;
     input {
+        background-color: var(--background-color);
         margin-bottom: 10px;
         color: var(--text-color);
-        text-align: right;
     }
     #label {
         text-align: left;
     }
     button {
         color: var(--text-color);
+        background-color: var(--background-color);
         &:hover {
             background-color: var(--primary-color);
         }
