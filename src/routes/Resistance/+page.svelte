@@ -27,3 +27,8 @@
     <button onclick={() => { resistanceValue = resistance(voltage, intensity); }}>Calculate</button>
     <p>Resistance: {resistanceValue} Ω</p>
 </div>
+
+<div class="description">
+    <p>The resistance <em>R</em> in ohms (Ω) is equal to the voltage <em>V</em> in volts (V) divided by the current <em>I</em> in amperes (A):</p>
+    <p><strong>R = V / I</strong></p>
+</div>

@@ -27,3 +27,8 @@
     <button onclick={() => { amperageValue = amperage(voltage, resistance); }}>Calculate</button>
     <p>Amperage: {amperageValue} A</p>
 </div>
+
+<div class="description">
+    <p>The amperage <em>I</em> in amperes (A) is equal to the voltage <em>V</em> in volts (V) divided by the resistance <em>R</em> in ohms (Ω):</p>
+    <p><strong>I = V / R</strong></p>
+</div>

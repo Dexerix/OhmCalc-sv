@@ -21,3 +21,13 @@
     <button onclick={() => { totalValue = serial_resistor(resistor_list.split(',')); }}>Calculate</button>
     <p>Total Resistance: {totalValue} Ω</p>
 </div>
+
+<div class="description">
+    <p>The total resistance <em>R<sub>total</sub></em> in ohms (Ω) of resistors connected in series is the sum of the individual resistances:</p>
+    <p><strong>R<sub>total</sub> = R<sub>1</sub> + R<sub>2</sub> + ... + R<sub>n</sub></strong></p>
+    <p>Where:</p>
+    <ul>
+        <li><em>R<sub>1</sub>, R<sub>2</sub>, ..., R<sub>n</sub></em> are the resistances of each resistor in ohms (Ω)</li>
+    </ul>
+
+</div>

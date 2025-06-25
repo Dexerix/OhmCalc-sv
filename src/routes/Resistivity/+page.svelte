@@ -31,3 +31,15 @@
     <button onclick={() => { rhoValue = resistivity(resistance, gauge, length); }}>Calculate</button>
     <p>Resistivity: {rhoValue} Ω mm2/m</p>
 </div>
+
+<div class="description">
+    <p>The resistivity <em>ρ</em> in ohm-millimeter squared per meter (Ω mm²/m) is calculated using the formula:</p>
+    <p><strong>ρ = R × (A / L)</strong></p>
+    <p>Where:</p>
+    <ul>
+        <li><em>R</em> is the resistance in ohms (Ω)</li>
+        <li><em>A</em> is the cross-sectional area in square millimeters (mm²)</li>
+        <li><em>L</em> is the length in meters (m)</li>
+    </ul>
+
+</div>

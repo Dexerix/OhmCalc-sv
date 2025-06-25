@@ -46,3 +46,11 @@ html, body {
         text-align: center;
     }
 }
+.description {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers horizontally */
+    max-width: 800px;
+    margin: 0 auto; /* Centers the container itself */
+    padding: 20px;
+}

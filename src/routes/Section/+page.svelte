@@ -21,3 +21,12 @@
     <button onclick={() => { gaugeValue = section(raw_diameter); }}>Calculate</button>
     <p>Gauge: {gaugeValue} mm2</p>
 </div>
+
+<div class="description">
+    <p>The cross-sectional area <em>A</em> in square millimeters (mm²) of a conductor is calculated using the formula:</p>
+    <p><strong>A = π × (d/2)²</strong></p>
+    <p>Where:</p>
+    <ul>
+        <li><em>d</em> is the diameter in millimeters (mm)</li>
+    </ul>
+</div>

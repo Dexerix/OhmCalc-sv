@@ -67,7 +67,7 @@ export function resistivity(raw_r:string, raw_gauge:string, raw_l:string): numbe
     return rho;
 };
 
-export function rhosistence(raw_rho:string, raw_gauge:string, raw_l:string): number {
+export function rhosistance(raw_rho:string, raw_gauge:string, raw_l:string): number {
     gauge = treat_exp(raw_gauge);
     l = treat_exp(raw_l);
     rho = treat_exp(raw_rho);
