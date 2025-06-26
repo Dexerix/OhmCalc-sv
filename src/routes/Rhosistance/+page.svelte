@@ -19,12 +19,12 @@
                 <td><input bind:value={rho} type="text" name="resistivity" id="resistivity" class="input"></td>
             </tr>
             <tr>
-                <td id="label"><label for="gauge">Gauge (mm²):</label></td>
-                <td><input bind:value={gauge} type="text" name="gauge" id="gauge" class="input"></td>
-            </tr>
-            <tr>
                 <td id="label"><label for="length">Length (m):</label></td>
                 <td><input bind:value={length} type="text" name="length" id="length" class="input"></td>
+            </tr>
+            <tr>
+                <td id="label"><label for="gauge">Gauge (mm²):</label></td>
+                <td><input bind:value={gauge} type="text" name="gauge" id="gauge" class="input"></td>
             </tr>
         </tbody>
     </table>

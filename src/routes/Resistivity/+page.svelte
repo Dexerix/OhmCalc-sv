@@ -38,7 +38,7 @@
     <p>Where:</p>
     <ul>
         <li><em>R</em> is the resistance in ohms (Ω)</li>
-        <li><em>A</em> is the cross-sectional area in square millimeters (mm²)</li>
+        <li><em>A</em> is the cross-sectional area (gauge) in square millimeters (mm²)</li>
         <li><em>L</em> is the length in meters (m)</li>
     </ul>
 

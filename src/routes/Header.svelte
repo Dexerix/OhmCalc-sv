@@ -6,6 +6,9 @@
         box-sizing: border-box;
         display: block;
     }
+    header {
+        background-color: var(--header-color);
+    }
     h1 {
         padding-top: 10px;
         color: var(--title-color);
@@ -31,9 +34,11 @@
     }
 </style>
 
-<h1>{title}</h1>
-<nav>
-    <a href=".">Home</a>
-    <a href="https://github.com/Dexerix/OhmCalc-sv">Github Repo</a>
-    <a href="https://ko-fi.com/L3L11A3Z1N">Buy me a cofee</a>
-</nav>
+<header>
+    <h1>{title}</h1>
+    <nav>
+        <a href=".">Home</a>
+        <a href="https://github.com/Dexerix/OhmCalc-sv">Github Repo</a>
+        <a href="https://ko-fi.com/L3L11A3Z1N">Buy me a coffee</a>
+    </nav>
+</header>

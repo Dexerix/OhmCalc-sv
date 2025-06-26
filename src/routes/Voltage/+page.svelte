@@ -36,5 +36,5 @@
 
 <div class="description">
     <p>The voltage <em>V</em> in volts (V) is equal to the product of the current <em>I</em> in amperes (A) and the resistance <em>R</em> in ohms (Ω):</p>
-    <p><strong>V = I × R</strong></p>
+    <p><strong>V = R × I</strong></p>
 </div>
