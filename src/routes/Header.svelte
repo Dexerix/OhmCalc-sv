@@ -4,7 +4,8 @@
 <style>
     * {
         box-sizing: border-box;
-        display: block;    }
+        display: block;
+    }
     h1 {
         padding-top: 10px;
         color: var(--title-color);
@@ -33,4 +34,6 @@
 <h1>{title}</h1>
 <nav>
     <a href=".">Home</a>
+    <a href="https://github.com/Dexerix/OhmCalc-sv">Github Repo</a>
+    <a href="https://ko-fi.com/L3L11A3Z1N">Buy me a cofee</a>
 </nav>
