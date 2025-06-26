@@ -30,3 +30,6 @@ OhmCalc-sv is the official svelte portage of [OhmCalc-cli](https://github.com/De
 - For large numbers, you can use scientific notation: `2.5*10^3` instead of `2500`
 - Units are automatically handled by the program
 - All decimal numbers should use a point (.) as separator
+
+## Notes
+- All the calculations provide results with 2 decimal precision
