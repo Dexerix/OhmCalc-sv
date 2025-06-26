@@ -36,7 +36,7 @@ function treat_exp(raw_v: string): number {
 export function voltage(raw_r:string, raw_i:string): number {
     r = treat_exp(raw_r);
     i = treat_exp(raw_i)
-    v = Math.round((r * i) * 100) / 100;
+    v = r * i;
     if (isNaN(v)) {
         v = 0;
     }
@@ -46,7 +46,7 @@ export function voltage(raw_r:string, raw_i:string): number {
 export function amperage(raw_v:string, raw_r:string): number {
     v = treat_exp(raw_v);
     r = treat_exp(raw_r);
-    a = Math.round((v / r) * 100) / 100;
+    a = v / r;
     if (isNaN(a)) {
         a = 0;
     }
@@ -56,7 +56,7 @@ export function amperage(raw_v:string, raw_r:string): number {
 export function resistance(raw_v:string, raw_i:string): number {
     v = treat_exp(raw_v);
     i = treat_exp(raw_i);
-    r = Math.round((v / i) * 100) / 100;
+    r = v / i;
     if (isNaN(r)) {
         r = 0;
     }
@@ -65,7 +65,7 @@ export function resistance(raw_v:string, raw_i:string): number {
 
 export function section(raw_diameter: string): number {
     diameter = treat_exp(raw_diameter);
-    gauge = Math.round((Math.PI * Math.pow(diameter, 2) / 4) * 100) / 100;
+    gauge = Math.PI * Math.pow(diameter, 2) / 4;
     if (isNaN(gauge)) {
         gauge = 0;
     }
@@ -76,7 +76,7 @@ export function resistivity(raw_r:string, raw_gauge:string, raw_l:string): numbe
     r = treat_exp(raw_r);
     gauge = treat_exp(raw_gauge);
     l = treat_exp(raw_l);
-    rho = Math.round(((r * gauge) / l) * 100) / 100;
+    rho = (r * gauge) / l;
     if (isNaN(rho)) {
         rho = 0;
     }
@@ -87,7 +87,7 @@ export function rhosistance(raw_rho:string, raw_gauge:string, raw_l:string): num
     gauge = treat_exp(raw_gauge);
     l = treat_exp(raw_l);
     rho = treat_exp(raw_rho);
-    r = Math.round(((rho * l) / gauge) * 100) / 100;
+    r = (rho * l) / gauge;
     if (isNaN(r)) {
         r = 0;
     }
@@ -104,7 +104,7 @@ export function parallel_resistor(r_list: string[]): number {
         for (let i = 0; i < r_list.length; i++) {
             r_total += 1 / treat_exp(r_list[i]);
         }
-        r_total = Math.round((1 / r_total) * 100) / 100;
+        r_total = 1 / r_total;
         if (isNaN(r_total)) {
             r_total = 0;
         }
@@ -121,7 +121,6 @@ export function serial_resistor(r_list: string[]): number {
     } else {
         r_total = treat_exp(r_list[0]);
     }
-    r_total = Math.round(r_total * 100) / 100;
     if (isNaN(r_total)) {
         r_total = 0;
     }
