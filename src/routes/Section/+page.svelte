@@ -3,6 +3,7 @@
     let { data }: { data: PageData } = $props();
     import Header from '../Header.svelte';
     import { section } from '../Ohm.svelte';
+    import Footer from '../Footer.svelte';
     let raw_diameter: string = $state('');
     let gaugeValue: number = $state(0);
 </script>
@@ -30,3 +31,4 @@
         <li><em>d</em> is the diameter in millimeters (mm)</li>
     </ul>
 </div>
+<Footer />

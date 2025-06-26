@@ -2,20 +2,14 @@
     import type { PageData } from './$types';
     let { data }: { data: PageData } = $props();
     import Header from '../Header.svelte';
+    import Footer from '../Footer.svelte';
     import { voltage } from '../Ohm.svelte';
-    // import '../../styles/global.css'
-
+    import '../../styles/global.css'
     let resistance: string = $state('');
     let intensity: string = $state('');
     let voltageValue: number = $state(0)
 </script>
-
-<style>
-    
-</style>
-
 <Header title="Voltage"/>
-
 <div class="fields">
     <table>
         <tbody>
@@ -31,10 +25,9 @@
     </table>
     <button onclick={() => { voltageValue = voltage(resistance, intensity); }}>Calculate</button>
     <p>Voltage: {voltageValue} V</p>
-    
 </div>
-
 <div class="description">
     <p>The voltage <em>V</em> in volts (V) is equal to the product of the current <em>I</em> in amperes (A) and the resistance <em>R</em> in ohms (Ω):</p>
     <p><strong>V = R × I</strong></p>
 </div>
+<Footer />

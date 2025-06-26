@@ -3,14 +3,13 @@
     let { data }: { data: PageData } = $props();
     import Header from '../Header.svelte';
     import { rhosistance } from '../Ohm.svelte';
+    import Footer from '../Footer.svelte';
     let rho: string = $state('');
     let gauge: string = $state('');
     let length: string = $state('');
     let rhoValue: number = $state(0);
 </script>
-
 <Header title="Rhosistance" />
-
 <div class="fields">
     <table>
         <tbody>
@@ -31,7 +30,6 @@
     <button onclick={() => { rhoValue = rhosistance(rho, gauge, length); }}>Calculate</button>
     <p>Resistance: {rhoValue} Ω</p>
 </div>
-
 <div class="description">
     <p>The resistance <em>R</em> in ohms (Ω) of a conductor is calculated using the formula:</p>
     <p><strong>R = ρ × (L / A)</strong></p>
@@ -42,3 +40,4 @@
         <li><em>A</em> is the cross-sectional area in square millimeters (mm²)</li>
     </ul>
 </div>
+<Footer />

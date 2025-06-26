@@ -13,6 +13,7 @@
         padding-top: 10px;
         color: var(--title-color);
         text-align: center;
+        font-size: 3rem;
     }
     nav {
         text-align: center;
@@ -33,12 +34,9 @@
         }
     }
 </style>
-
 <header>
     <h1>{title}</h1>
     <nav>
         <a href=".">Home</a>
-        <a href="https://github.com/Dexerix/OhmCalc-sv">Github Repo</a>
-        <a href="https://ko-fi.com/L3L11A3Z1N">Buy me a coffee</a>
     </nav>
 </header>
