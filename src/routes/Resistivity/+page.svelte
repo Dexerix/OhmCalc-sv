@@ -3,7 +3,6 @@
     let { data }: { data: PageData } = $props();
     import Header from '../Header.svelte';
     import { resistivity } from '../Ohm.svelte';
-    import Footer from '../Footer.svelte';
     let resistance:string = $state('');
     let gauge:string = $state('');
     let length:string = $state('');
@@ -40,4 +39,3 @@
         <li><em>L</em> is the length in meters (m)</li>
     </ul>
 </div>
-<Footer />

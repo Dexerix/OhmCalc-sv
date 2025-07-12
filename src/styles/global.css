@@ -6,6 +6,13 @@
     --header-color: #121212df;
     --title-color: #008c4a;
     --border : #898ea4;
+
+    /* CSS HEX */
+    --space-cadet: #22223bff;
+    --french-gray: #acadbcff;
+    --cool-gray: #9b9eceff;
+    --slate-blue: #6665ddff;
+    --bittersweet-shimmer: #cc444bff;
 }
 
 * {

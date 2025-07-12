@@ -3,7 +3,6 @@
     let { data }: { data: PageData } = $props();
     import Header from '../Header.svelte';
     import { rhosistance } from '../Ohm.svelte';
-    import Footer from '../Footer.svelte';
     let rho: string = $state('');
     let gauge: string = $state('');
     let length: string = $state('');
@@ -40,4 +39,3 @@
         <li><em>A</em> is the cross-sectional area in square millimeters (mm²)</li>
     </ul>
 </div>
-<Footer />

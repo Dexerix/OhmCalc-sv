@@ -3,8 +3,6 @@
     let { data }: { data: PageData } = $props();
     import Header from '../Header.svelte';
     import { resistance } from '../Ohm.svelte';
-    import Footer from '../Footer.svelte';
-
     let voltage: string = $state('');
     let intensity: string = $state('');
     let resistanceValue: number = $state(0)
@@ -30,4 +28,3 @@
     <p>The resistance <em>R</em> in ohms (Ω) is equal to the voltage <em>V</em> in volts (V) divided by the current <em>I</em> in amperes (A):</p>
     <p><strong>R = V / I</strong></p>
 </div>
-<Footer />

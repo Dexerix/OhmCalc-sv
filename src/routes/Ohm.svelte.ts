@@ -1,39 +1,27 @@
-let raw_r: string;
-let raw_v: string;
-let raw_i: string;
-let raw_diameter: string;
-let raw_gauge: string;
-let raw_l: string;
-let raw_rho: string;
-let r: number;
-let v: number;
-let i: number;
-let a: number;
-let diameter: number;
-let gauge: number;
-let l: number;
-let rho: number;
-let r_list: string[];
-let r_total: number;
+import stringToNumeric from '@cityssm/string-to-numeric'
 
 function treat_exp(raw_v: string): number {
     let calculated_value: number;
     if (raw_v.indexOf("*") !== -1) {
         let parts = raw_v.split("*");
-        let base_value = parseFloat(parts[0]);
+        let base_value = stringToNumeric(parts[0]);
         let exponent = parts[1];
         let exp_parts = exponent.split("^");
-        let power = parseInt(exp_parts[1])
+        let power = stringToNumeric(exp_parts[1])
         let exponent_value = 10**power;
 
         calculated_value = base_value * exponent_value;
     } else {
-        calculated_value = parseFloat(raw_v);
+        calculated_value = stringToNumeric(raw_v);
     }
     return calculated_value;
 };
 
 export function voltage(raw_r:string, raw_i:string): number {
+    let v: number;
+    let r: number;
+    let i: number;
+
     r = treat_exp(raw_r);
     i = treat_exp(raw_i)
     v = r * i;
@@ -44,6 +32,10 @@ export function voltage(raw_r:string, raw_i:string): number {
 };
 
 export function amperage(raw_v:string, raw_r:string): number {
+    let v: number;
+    let r: number;
+    let a: number;
+
     v = treat_exp(raw_v);
     r = treat_exp(raw_r);
     a = v / r;
@@ -54,6 +46,10 @@ export function amperage(raw_v:string, raw_r:string): number {
 };
 
 export function resistance(raw_v:string, raw_i:string): number {
+    let v: number;
+    let i: number;
+    let r: number;
+
     v = treat_exp(raw_v);
     i = treat_exp(raw_i);
     r = v / i;
@@ -64,6 +60,9 @@ export function resistance(raw_v:string, raw_i:string): number {
 };
 
 export function section(raw_diameter: string): number {
+    let diameter: number;
+    let gauge: number;
+
     diameter = treat_exp(raw_diameter);
     gauge = Math.PI * Math.pow(diameter, 2) / 4;
     if (isNaN(gauge)) {
@@ -73,6 +72,11 @@ export function section(raw_diameter: string): number {
 };
 
 export function resistivity(raw_r:string, raw_gauge:string, raw_l:string): number {
+    let r: number;
+    let gauge: number;
+    let l: number;
+    let rho: number;
+
     r = treat_exp(raw_r);
     gauge = treat_exp(raw_gauge);
     l = treat_exp(raw_l);
@@ -84,6 +88,11 @@ export function resistivity(raw_r:string, raw_gauge:string, raw_l:string): numbe
 };
 
 export function rhosistance(raw_rho:string, raw_gauge:string, raw_l:string): number {
+    let gauge: number;
+    let l: number;
+    let rho: number;
+    let r: number;
+
     gauge = treat_exp(raw_gauge);
     l = treat_exp(raw_l);
     rho = treat_exp(raw_rho);
@@ -95,6 +104,8 @@ export function rhosistance(raw_rho:string, raw_gauge:string, raw_l:string): num
 };
 
 export function parallel_resistor(r_list: string[]): number {
+    let r_total: number;
+
     r_total = 0;
     if (r_list.length === 0) {
         return 0;
@@ -113,6 +124,8 @@ export function parallel_resistor(r_list: string[]): number {
 };
 
 export function serial_resistor(r_list: string[]): number {
+    let r_total: number;
+
     r_total = 0;
     if (r_list.length > 1) {
         for (let i = 0; i < r_list.length; i++) {

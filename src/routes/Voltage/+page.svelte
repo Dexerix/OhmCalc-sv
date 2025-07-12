@@ -2,7 +2,6 @@
     import type { PageData } from './$types';
     let { data }: { data: PageData } = $props();
     import Header from '../Header.svelte';
-    import Footer from '../Footer.svelte';
     import { voltage } from '../Ohm.svelte';
     import '../../styles/global.css'
     let resistance: string = $state('');
@@ -30,4 +29,3 @@
     <p>The voltage <em>V</em> in volts (V) is equal to the product of the current <em>I</em> in amperes (A) and the resistance <em>R</em> in ohms (Ω):</p>
     <p><strong>V = R × I</strong></p>
 </div>
-<Footer />

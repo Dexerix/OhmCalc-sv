@@ -2,7 +2,6 @@
     import type { PageData } from './$types';
     let { data }: { data: PageData } = $props();
     import Header from '../Header.svelte';
-    import Footer from '../Footer.svelte';
     import { parallel_resistor } from '../Ohm.svelte';
     let resistor_list: string = $state('');
     let totalValue: number = $state(0);
@@ -28,4 +27,3 @@
         <li><em>R<sub>1</sub>, R<sub>2</sub>, ..., R<sub>n</sub></em> are the resistances of each resistor in ohms (Ω)</li>
     </ul>
 </div>
-<Footer />
