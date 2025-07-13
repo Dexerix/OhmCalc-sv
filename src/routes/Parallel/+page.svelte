@@ -8,14 +8,8 @@
 </script>
 <Header title="Parallel Resistor" />
 <div class="fields">
-    <table>
-        <tbody>
-            <tr>
-                <td id="label"><label for="resistor_list">Resistor List (Ω, separated by commas):</label></td>
-                <td><input bind:value={resistor_list} type="text" name="resistor_list" id="resistor_list" class="input"></td>
-            </tr>
-        </tbody>
-    </table>
+    <label for="resistor_list">Resistor List (Ω, separated by commas):</label>
+    <input bind:value={resistor_list} type="text" name="resistor_list" id="resistor_list" class="input">
     <button onclick={() => { totalValue = parallel_resistor(resistor_list.split(',')); }}>Calculate</button>
     <p>Total Resistance: {totalValue} Ω</p>
 </div>

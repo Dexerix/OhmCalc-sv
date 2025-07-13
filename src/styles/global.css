@@ -25,6 +25,7 @@ html, body {
     min-height: 100vh;
     margin: 0;
     padding: 0;
+    padding-bottom: 120px; /* Add space for fixed footer */
     background-color: var(--background-color);
     font-size:larger;
 }
@@ -39,10 +40,7 @@ html, body {
         background-color: var(--background-color);
         margin-bottom: 10px;
         color: var(--text-color);
-    }
-    #label {
-        text-align: left;
-    }
+    };
     button {
         color: var(--text-color);
         background-color: var(--background-color);

@@ -13,4 +13,3 @@
 <div class="description">
     <p>OhmCalc is an app that performs various electrical calculations based on Ohm's law and other electrical formulas.</p>
 </div>
-<Footer />

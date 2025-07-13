@@ -9,18 +9,10 @@
 </script>
 <Header title="Resistance" />
 <div class="fields">
-    <table>
-        <tbody>
-            <tr>
-                <td id="label"><label for="voltage">Voltage (V):</label></td>
-                <td><input bind:value={voltage} type="text" name="voltage" id="voltage" class="input"></td>
-            </tr>
-            <tr>
-                <td id="label"><label for="intensity">Intensity (A):</label></td>
-                <td><input bind:value={intensity} type="text" name="intensity" id="intensity" class="input"></td>
-            </tr>
-        </tbody>
-    </table>
+    <label for="voltage">Voltage (V):</label>
+    <input bind:value={voltage} type="text" name="voltage" id="voltage" class="input">
+    <label for="intensity">Intensity (A):</label>
+    <input bind:value={intensity} type="text" name="intensity" id="intensity" class="input">
     <button onclick={() => { resistanceValue = resistance(voltage, intensity); }}>Calculate</button>
     <p>Resistance: {resistanceValue} Ω</p>
 </div>
