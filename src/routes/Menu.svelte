@@ -1,11 +1,23 @@
 <style>
-    * {
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+    
+    li {
+        display: block;
+        margin: 0;
+    }
+    
+    a {
         text-decoration: none;
         text-align: center;
-        display: block;
+        display: inline-block;
         color: var(--primary-color);
         padding: 0px;
-        :hover {
+        &:hover {
             text-decoration: none;
             color: var(--secondary-color);
         }
