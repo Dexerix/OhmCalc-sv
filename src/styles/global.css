@@ -32,16 +32,24 @@ html, body {
 
 .fields {
     display: grid;
-    place-items: center;
+    grid-template-columns: auto auto;
+    gap: 10px 20px;
+    justify-content: center;
+    align-items: center;
     color: var(--text-color);
-    text-align: center;
     margin-top: 20px;
+    label {
+        text-align: right;
+        justify-self: end;
+    }
     input {
-        background-color: var(--background-color);
-        margin-bottom: 10px;
+        background-color: var(--cool-gray);
         color: var(--text-color);
+        justify-self: start;
     };
     button {
+        grid-column: 1 / -1;
+        justify-self: center;
         color: var(--text-color);
         background-color: var(--background-color);
         &:hover {
@@ -49,7 +57,9 @@ html, body {
         }
     }
     p {
+        grid-column: 1 / -1;
         text-align: center;
+        justify-self: center;
     }
 }
 .description {

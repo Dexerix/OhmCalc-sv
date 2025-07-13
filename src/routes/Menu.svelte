@@ -2,7 +2,8 @@
     ul {
         list-style: none;
         padding: 0;
-        margin: 0;
+        margin-top: 20px;
+        margin-bottom: 20px;
         text-align: center;
     }
     
