@@ -1,7 +1,7 @@
 # OhmCalc-sv
 
 ## Descrition
-OhmCalc-sv is the official svelte portage of [OhmCalc-cli](https://github.com/Dexerix/OhmCalc-cli). The app performs various electrical calculations based on Ohm's law and other electrical formulas.
+OhmCalc-sv is the official sveltejs port of [OhmCalc-cli](https://github.com/Dexerix/OhmCalc-cli). This web app performs various electrical calculations based on Ohm's law and other electrical formulas.
 
 ## Features
 - Voltage calculation
