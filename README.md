@@ -27,6 +27,6 @@ OhmCalc-sv is the official sveltejs port of [OhmCalc-cli](https://github.com/Dex
    - Serial resistors
 
 ## Input Format
-- For large numbers, you can use scientific notation: `2.5*10^3` instead of `2500`
+- For large numbers, you can use scientific notation: `2.5*10^-3` instead of `0.0025`
 - Units are automatically handled by the program
 - All decimal numbers should use a point (.) as separator
