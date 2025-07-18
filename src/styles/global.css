@@ -4,7 +4,6 @@
     --text-color: #f8f8ff;
     --background-color: #000;
     --header-color: #121212df;
-    --title-color: #008c4a;
     --border : #898ea4;
 
     /* CSS HEX */
@@ -13,6 +12,13 @@
     --cool-gray: #9b9eceff;
     --slate-blue: #6665ddff;
     --bittersweet-shimmer: #cc444bff;
+
+    --sans-font: -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir,
+    "Nimbus Sans L", Roboto, "Noto Sans", "Segoe UI", Arial, Helvetica,
+    "Helvetica Neue", sans-serif;
+    --mono-font: Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    --std-border-radius: 5px;
+    --border-width: 1px;
 }
 
 * {
@@ -21,13 +27,51 @@
     box-sizing: border-box;
 }
 
+input {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
 html, body {
     min-height: 100vh;
     margin: 0;
     padding: 0;
-    padding-bottom: 120px; /* Add space for fixed footer */
+    padding-bottom: 120px;
     background-color: var(--background-color);
-    font-size:larger;
+    font-family: var(--sans-font);
+    font-size: 1.15rem;
+    line-height: 1.5;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.6rem;
+  margin-top: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+  margin-top: 3rem;
+}
+
+h4 {
+  font-size: 1.44rem;
+}
+
+h5 {
+  font-size: 1.15rem;
+}
+
+h6 {
+  font-size: 0.96rem;
+}
+
+p {
+  margin: 1.5rem 0;
 }
 
 .fields {
@@ -39,19 +83,35 @@ html, body {
     color: var(--text-color);
     margin-top: 20px;
     label {
-        text-align: right;
+        text-align: justify;
         justify-self: end;
+        display: block;
+        font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+        min-width: 15vw;
     }
     input {
         background-color: var(--cool-gray);
         color: var(--text-color);
         justify-self: start;
+        font-size: clamp(0.9rem, 2.5vw, 1.15rem);
+        font-family: inherit;
+        padding: clamp(0.3em, 1.5vw, 0.6em);
+        margin-bottom: 0.5rem;
+        border-radius: var(--std-border-radius);
+        box-shadow: none;
+        width: clamp(150px, 25vw, 300px);
+        display: inline-block
     };
     button {
         grid-column: 1 / -1;
         justify-self: center;
         color: var(--text-color);
         background-color: var(--background-color);
+        border: var(--border-width) solid;
+        border-radius: var(--std-border-radius);
+        padding: 0.5rem 0.9rem;
+        line-height: normal;
+        font-size: clamp(0.8rem, 2.2vw, 1rem);
         &:hover {
             background-color: var(--primary-color);
         }
@@ -60,8 +120,10 @@ html, body {
         grid-column: 1 / -1;
         text-align: center;
         justify-self: center;
+        font-size: clamp(0.9rem, 2.5vw, 1.2rem);
     }
 }
+
 .description {
     display: flex;
     flex-direction: column;
@@ -69,4 +131,81 @@ html, body {
     max-width: 800px;
     margin: 0 auto; /* Centers the container itself */
     padding: 20px;
+    ul {
+        text-align: left;
+        align-self: flex-start;
+        width: 100%;
+    }    
+}
+
+@media only screen and (max-width: 720px) {
+    textarea,
+    select,
+    input {
+        width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 720px) {
+    h1 {
+        font-size: 6.9vw;
+    }
+
+    h2 {
+        font-size: 5.8vw;
+    }
+
+    h3 {
+        font-size: 4.9vw;
+    }
+
+    h4 {
+        font-size: 3.5vw;
+    }
+}
+
+@media print {
+  @page {
+    margin: 1cm;
+  }
+  body {
+    display: block;
+  }
+  body > header {
+    background-color: unset;
+  }
+  body > header nav,
+  body > footer {
+    display: none;
+  }
+  article {
+    border: none;
+    padding: 0;
+  }
+  a[href^="http"]::after {
+    content: " <" attr(href) ">";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  a {
+    text-decoration: none;
+  }
+  p {
+    widows: 3;
+    orphans: 3;
+  }
+  hr {
+    border-top: var(--border-width) solid var(--border);
+  }
+  mark {
+    border: var(--border-width) solid var(--border);
+  }
+  pre, table, figure, img, svg {
+    break-inside: avoid;
+  }
+  pre code {
+    white-space: pre-wrap;
+  }
 }

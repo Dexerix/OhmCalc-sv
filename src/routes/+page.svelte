@@ -4,7 +4,6 @@
     let { data }: { data: PageData } = $props();
     import Header from './Header.svelte';
     import Menu from './Menu.svelte';
-    import Footer from './Footer.svelte';
     import '../styles/global.css';
 </script>
 

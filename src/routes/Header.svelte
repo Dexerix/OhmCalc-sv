@@ -11,9 +11,9 @@
     }
     h1 {
         padding-top: 10px;
-        color: var(--title-color);
+        color: var(--slate-blue);
         text-align: center;
-        font-size: 3rem;
+        font-size: 4vw;
     }
     nav {
         text-align: center;
@@ -31,6 +31,21 @@
             &:hover {
                 color: var(--primary-color);
             }
+        }
+    }
+
+    @media only screen and (max-width: 720px) {
+        header nav a {
+            border: none;
+            padding: 0;
+            text-decoration: underline;
+            line-height: 1;
+        }
+    }
+
+    @media only screen and (max-width: 720px) {
+        h1 {
+            font-size: 2.5rem;
         }
     }
 </style>

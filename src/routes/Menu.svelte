@@ -2,8 +2,8 @@
     ul {
         list-style: none;
         padding: 0;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-top: 10px;
+        margin-bottom: 30px;
         text-align: center;
     }
     
@@ -23,15 +23,32 @@
             color: var(--secondary-color);
         }
     }
+
+    h3 {
+        margin-top: 20px;
+        margin-bottom: 0px;
+        font-size: 1.2rem;
+        text-align: center;
+        color: var(--border);
+    }
 </style>
 
+<h3>Base formulas</h3>
 <ul>
     <li><a href="./Voltage">Voltage</a></li>
     <li><a href="./Amperage">Amperage</a></li>
     <li><a href="./Resistance">Resistance</a></li>
+</ul>
+
+<h3>Conducter formulas</h3>
+<ul>
     <li><a href="./Section">Section</a></li>
     <li><a href="./Resistivity">Resistivity</a></li>
     <li><a href="./Rhosistance">Resistance using rho (ρ)</a></li>
+</ul>
+
+<h3>Resistor formulas</h3>
+<ul>
     <li><a href="./Parallel">Parallel resistors</a></li>
     <li><a href="./Serial">Serial resistors</a></li>
 </ul>
